@@ -28,9 +28,9 @@ $(document).ready(() => {
  // const weatherResult = $.parseJSON(json);
 // })
 
-$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London&APPID=7289e9613cb8f800099af227a5133275",function(data){
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=London&APPID=7289e9613cb8f800099af227a5133275",function(data){
   $('.location').text(data.name);
-  $('.temperature').text(parseInt(data.main.temp, 10) - 273.15);
+  $('.temperature').text(parseInt(data.main.temp - 273.15, 10));
  })
  
  
